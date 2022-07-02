@@ -12,10 +12,6 @@ class LogInViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
-    @IBOutlet var userNameRemindButton: UIButton!
-    @IBOutlet var passwordRemindButton: UIButton!
-    
     let userName = "User"
     let password = "Password"
     
@@ -29,7 +25,15 @@ class LogInViewController: UIViewController {
         self.view.endEditing(true)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomViewController else { return }
+        welcomeVC.welcomeValue = usernameTextField.text
+    }
+    
     @IBAction func logInButtonPressed() {
+        if usernameTextField.text != userName || passwordTextField.text != password {
+            showAlert(with: "Oops!", and: "Wrong Login or password. Try again!")
+        }
     }
     
     @IBAction func forgotLogInButtonPressed() {
@@ -40,6 +44,11 @@ class LogInViewController: UIViewController {
         showAlert(with: "Oops!", and: "Your password is \(password)")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let welcomeVC = segue.source as? WelcomViewController else { return }
+        usernameTextField.text = welcomeVC.defaultTextField
+        passwordTextField.text = welcomeVC.defaultTextField
+    }
     
 }
 
