@@ -12,8 +12,8 @@ class LogInViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let userName = "User"
-    let password = "Password"
+    let userName = "user"
+    let password = "password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,13 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInButtonPressed() {
-        if usernameTextField.text != userName || passwordTextField.text != password {
-            showAlert(with: "Oops!", and: "Wrong Login or password. Try again!")
+        guard usernameTextField.text == userName else {
+            showAlert(with: "Damn, that sucks!", and: "Wrong Login or password. Try again, man!")
+            return
+        }
+        guard passwordTextField.text == password else {
+            showAlert(with: "Damn, that sucks!", and: "Wrong Login or password. Try again, man!")
+            return
         }
     }
     
@@ -56,7 +61,7 @@ extension LogInViewController {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.passwordTextField.text = ""
+            self.passwordTextField.text?.removeAll()
         }
         alert.addAction(okAction)
         present(alert, animated: true)

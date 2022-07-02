@@ -98,6 +98,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEE-yb-rZd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuI-vt-Abf">
                                 <rect key="frame" x="171.5" y="203" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -118,13 +122,18 @@
                         <viewLayoutGuide key="safeArea" id="0kz-sG-NHj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0kz-sG-NHj" firstAttribute="bottom" secondItem="uEE-yb-rZd" secondAttribute="bottom" id="BaF-Bo-k83"/>
+                            <constraint firstItem="uEE-yb-rZd" firstAttribute="top" secondItem="Iyn-Nz-Wnr" secondAttribute="top" id="Drc-t3-uZ0"/>
                             <constraint firstItem="19j-oQ-Pfg" firstAttribute="centerY" secondItem="Iyn-Nz-Wnr" secondAttribute="centerY" constant="110" id="UEy-Q6-DJ6"/>
                             <constraint firstItem="AuI-vt-Abf" firstAttribute="centerY" secondItem="Iyn-Nz-Wnr" secondAttribute="centerY" constant="-200" id="Zz6-a8-EEy"/>
+                            <constraint firstItem="0kz-sG-NHj" firstAttribute="trailing" secondItem="uEE-yb-rZd" secondAttribute="trailing" id="c7W-KB-PnE"/>
+                            <constraint firstItem="uEE-yb-rZd" firstAttribute="leading" secondItem="0kz-sG-NHj" secondAttribute="leading" id="dsp-eL-pci"/>
                             <constraint firstItem="19j-oQ-Pfg" firstAttribute="centerX" secondItem="Iyn-Nz-Wnr" secondAttribute="centerX" id="gkt-nU-ryu"/>
                             <constraint firstItem="AuI-vt-Abf" firstAttribute="centerX" secondItem="Iyn-Nz-Wnr" secondAttribute="centerX" id="qDd-fb-cM4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="uEE-yb-rZd" id="Jjs-ob-XhW"/>
                         <outlet property="welcomeLabel" destination="AuI-vt-Abf" id="NSg-xH-ZQu"/>
                     </connections>
                 </viewController>
