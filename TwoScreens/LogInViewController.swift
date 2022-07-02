@@ -28,6 +28,7 @@ class LogInViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomViewController else { return }
         welcomeVC.welcomeValue = usernameTextField.text
+        welcomeVC.modalPresentationStyle = .fullScreen
     }
     
     @IBAction func logInButtonPressed() {
