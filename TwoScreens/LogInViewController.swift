@@ -37,11 +37,11 @@ class LogInViewController: UIViewController {
             textFieldIsEmpty()
         } else {
             guard userNameTextField.text == userName else {
-                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or password. Try again, man!")
+                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or Password. Try again, man!")
                 return
             }
             guard passwordTextField.text == password else {
-                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or password. Try again, man!")
+                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or Password. Try again, man!")
                 return
             }
         }
