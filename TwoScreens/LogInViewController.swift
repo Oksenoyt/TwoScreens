@@ -26,19 +26,25 @@ class LogInViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomViewController else { return }
+        guard let welcomeVC = segue.destination as? WelcomViewController
+        else { return }
+        
         welcomeVC.welcomeValue = usernameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
     }
     
     @IBAction func logInButtonPressed() {
-        guard usernameTextField.text == userName else {
-            showAlert(with: "Damn, that sucks!", and: "Wrong Login or password. Try again, man!")
-            return
-        }
-        guard passwordTextField.text == password else {
-            showAlert(with: "Damn, that sucks!", and: "Wrong Login or password. Try again, man!")
-            return
+        if (usernameTextField.text?.isEmpty ?? false) || (passwordTextField.text?.isEmpty ?? false) {
+            textFieldIsEmpty()
+        } else {
+            guard usernameTextField.text == userName else {
+                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or password. Try again, man!")
+                return
+            }
+            guard passwordTextField.text == password else {
+                showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or password. Try again, man!")
+                return
+            }
         }
     }
     
@@ -60,11 +66,24 @@ class LogInViewController: UIViewController {
 
 extension LogInViewController {
     private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.passwordTextField.text?.removeAll()
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func textFieldIsEmpty() {
+        if (usernameTextField.text?.isEmpty ?? false) && (passwordTextField.text?.isEmpty ?? false) {
+            showAlert(with: "Oops!", and: "Please enter login and password!")
+        } else if (usernameTextField.text?.isEmpty ?? false) {
+            showAlert(with: "Oops!", and: "Plese enter login!")
+        } else if (passwordTextField.text?.isEmpty ?? false) {
+            showAlert(with: "Oops!", and: "Please enter password")
+        }
     }
 }
