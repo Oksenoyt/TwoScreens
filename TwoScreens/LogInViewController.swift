@@ -2,14 +2,14 @@
 //  ViewController.swift
 //  TwoScreens
 //
-//  Created by Elena Kholodilina on 02.07.2022.
+//  Created by Arseniy Oksenoyt on 02.07.2022.
 //
 
 import UIKit
 
 class LogInViewController: UIViewController {
 
-    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     let userName = "user"
@@ -17,7 +17,6 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,18 +25,18 @@ class LogInViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomViewController
+        guard let welcomeVC = segue.destination as? WelcomeViewController
         else { return }
         
-        welcomeVC.welcomeValue = usernameTextField.text
+        welcomeVC.welcomeValue = userNameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
     }
     
     @IBAction func logInButtonPressed() {
-        if (usernameTextField.text?.isEmpty ?? false) || (passwordTextField.text?.isEmpty ?? false) {
+        if (userNameTextField.text?.isEmpty ?? false) || (passwordTextField.text?.isEmpty ?? false) {
             textFieldIsEmpty()
         } else {
-            guard usernameTextField.text == userName else {
+            guard userNameTextField.text == userName else {
                 showAlert(with: "Damn, that sucks! \u{1f600}", and: "Wrong Login or password. Try again, man!")
                 return
             }
@@ -49,17 +48,16 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func forgotLogInButtonPressed() {
-        showAlert(with: "Oops!", and: "Your user name is \(userName)")
+        showAlert(with: "Oops!", and: "Your user name is: \(userName)")
     }
     
     @IBAction func forgotPassButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is \(password)")
+        showAlert(with: "Oops!", and: "Your password is: \(password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let welcomeVC = segue.source as? WelcomViewController else { return }
-        usernameTextField.text = welcomeVC.defaultTextField
-        passwordTextField.text = welcomeVC.defaultTextField
+        userNameTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
     }
     
 }
@@ -78,12 +76,12 @@ extension LogInViewController {
     }
     
     private func textFieldIsEmpty() {
-        if (usernameTextField.text?.isEmpty ?? false) && (passwordTextField.text?.isEmpty ?? false) {
-            showAlert(with: "Oops!", and: "Please enter login and password!")
-        } else if (usernameTextField.text?.isEmpty ?? false) {
-            showAlert(with: "Oops!", and: "Plese enter login!")
+        if (userNameTextField.text?.isEmpty ?? false) && (passwordTextField.text?.isEmpty ?? false) {
+            showAlert(with: "Oops!", and: "Please, enter Login and Password!")
+        } else if (userNameTextField.text?.isEmpty ?? false) {
+            showAlert(with: "Oops!", and: "Please, enter Login!")
         } else if (passwordTextField.text?.isEmpty ?? false) {
-            showAlert(with: "Oops!", and: "Please enter password")
+            showAlert(with: "Oops!", and: "Please, enter Password")
         }
     }
 }

@@ -32,7 +32,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FQ-C6-fxx">
-                                <rect key="frame" x="167" y="487.5" width="80" height="41"/>
+                                <rect key="frame" x="167" y="437.5" width="80" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8n0-VM-5lb"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iUX-ld-iPj">
-                                <rect key="frame" x="40" y="553.5" width="334" height="32"/>
+                                <rect key="frame" x="40" y="503.5" width="334" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-Wk-lMt">
                                         <rect key="frame" x="0.0" y="0.0" width="157" height="32"/>
@@ -76,24 +76,24 @@
                             <constraint firstItem="0FQ-C6-fxx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MnS-XK-FfN"/>
                             <constraint firstItem="iUX-ld-iPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="PRN-Qw-eDG"/>
                             <constraint firstItem="Ab9-m2-nRU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Qcj-eJ-ebt"/>
-                            <constraint firstItem="0FQ-C6-fxx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="cWZ-2g-RxC"/>
+                            <constraint firstItem="0FQ-C6-fxx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="cWZ-2g-RxC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iUX-ld-iPj" secondAttribute="trailing" constant="40" id="ev3-wa-iTl"/>
                             <constraint firstItem="Ab9-m2-nRU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="yMW-gC-dLd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="NbY-7B-HtO" id="VY2-CL-Mhm"/>
-                        <outlet property="usernameTextField" destination="vob-B2-sdm" id="gsh-8S-9J3"/>
+                        <outlet property="userNameTextField" destination="vob-B2-sdm" id="gsh-8S-9J3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-503" y="185"/>
         </scene>
-        <!--Welcom View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="OKC-oV-oKK">
             <objects>
-                <viewController id="SsO-0a-DcP" customClass="WelcomViewController" customModule="TwoScreens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SsO-0a-DcP" customClass="WelcomeViewController" customModule="TwoScreens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iyn-Nz-Wnr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,19 +102,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuI-vt-Abf">
-                                <rect key="frame" x="171.5" y="203" width="71" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="q47-tg-uKD">
+                                <rect key="frame" x="69" y="203" width="276" height="144"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WelcomeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuI-vt-Abf">
+                                        <rect key="frame" x="42" y="0.0" width="192" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emojiLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-xP-pMe">
+                                        <rect key="frame" x="0.0" y="72" width="276" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19j-oQ-Pfg">
-                                <rect key="frame" x="161" y="508" width="92" height="46"/>
+                                <rect key="frame" x="161.5" y="508" width="91" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Log our"/>
+                                <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="logOutButtonPressed" destination="SsO-0a-DcP" eventType="touchUpInside" id="fdo-16-j7Q"/>
                                     <segue destination="svm-0k-fTI" kind="unwind" unwindAction="unwindFor:" id="5l1-4U-NyK"/>
                                 </connections>
                             </button>
@@ -123,17 +133,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0kz-sG-NHj" firstAttribute="bottom" secondItem="uEE-yb-rZd" secondAttribute="bottom" id="BaF-Bo-k83"/>
+                            <constraint firstItem="q47-tg-uKD" firstAttribute="centerY" secondItem="Iyn-Nz-Wnr" secondAttribute="centerY" constant="-146" id="COK-7M-fUx"/>
                             <constraint firstItem="uEE-yb-rZd" firstAttribute="top" secondItem="Iyn-Nz-Wnr" secondAttribute="top" id="Drc-t3-uZ0"/>
                             <constraint firstItem="19j-oQ-Pfg" firstAttribute="centerY" secondItem="Iyn-Nz-Wnr" secondAttribute="centerY" constant="110" id="UEy-Q6-DJ6"/>
-                            <constraint firstItem="AuI-vt-Abf" firstAttribute="centerY" secondItem="Iyn-Nz-Wnr" secondAttribute="centerY" constant="-200" id="Zz6-a8-EEy"/>
+                            <constraint firstItem="q47-tg-uKD" firstAttribute="centerX" secondItem="Iyn-Nz-Wnr" secondAttribute="centerX" id="WPm-U9-IaG"/>
                             <constraint firstItem="0kz-sG-NHj" firstAttribute="trailing" secondItem="uEE-yb-rZd" secondAttribute="trailing" id="c7W-KB-PnE"/>
                             <constraint firstItem="uEE-yb-rZd" firstAttribute="leading" secondItem="0kz-sG-NHj" secondAttribute="leading" id="dsp-eL-pci"/>
                             <constraint firstItem="19j-oQ-Pfg" firstAttribute="centerX" secondItem="Iyn-Nz-Wnr" secondAttribute="centerX" id="gkt-nU-ryu"/>
-                            <constraint firstItem="AuI-vt-Abf" firstAttribute="centerX" secondItem="Iyn-Nz-Wnr" secondAttribute="centerX" id="qDd-fb-cM4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="colorView" destination="uEE-yb-rZd" id="Jjs-ob-XhW"/>
+                        <outlet property="welcomeEmojiLabel" destination="KM7-xP-pMe" id="6fd-S6-RUe"/>
                         <outlet property="welcomeLabel" destination="AuI-vt-Abf" id="NSg-xH-ZQu"/>
                     </connections>
                 </viewController>
