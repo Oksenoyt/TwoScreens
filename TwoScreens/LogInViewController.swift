@@ -21,11 +21,6 @@ class LogInViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController
-//        else { return }
-//
-//        welcomeVC.user = (userNameTextField.text ?? "")
-//        welcomeVC.modalPresentationStyle = .fullScreen
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
