@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="1020" y="185"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="mDC-GS-vEG">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Njg-NR-a1u" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Njg-NR-a1u" customClass="TabBarViewController" customModule="TwoScreens" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y98-b3-eh9">
                         <autoresizingMask key="autoresizingMask"/>
