@@ -14,6 +14,20 @@ class LogInViewController: UIViewController {
     
     private let user = User.getUser()
     
+    private let primaryColor = UIColor(
+        red: 252/255,
+        green: 238/255,
+        blue: 33/255,
+        alpha: 1
+    )
+    
+    private let secondaryColor = UIColor(
+        red: 107/255,
+        green: 148/255,
+        blue: 230/255,
+        alpha: 1
+    )
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -27,18 +41,20 @@ class LogInViewController: UIViewController {
             if let firstVC = viewController as? WelcomeViewController {
                 firstVC.login = "\(user.person.firstName) \(user.person.familyName)"
                 firstVC.modalPresentationStyle = .fullScreen
+                firstVC.gradientLayer = getColor(mainColor: primaryColor, secondColor: secondaryColor)
             } else if let secondVC = viewController as? PersonalInfoViewController {
-                secondVC.view.backgroundColor = .yellow
-                secondVC.personalInfoLabel.text = user.person.description
+//                secondVC.view.backgroundColor = .systemYellow
+                secondVC.personalInfo = user.person.description
+                secondVC.gradientLayer = getColor(mainColor: primaryColor, secondColor: secondaryColor)
             } else if let thirdVC = viewController as? PhotosViewController {
-                //let photo = UIImage(named: user.person.photo)
                 thirdVC.userPhoto = UIImage(named: user.person.photo)
             }
         }
     }
     
     @IBAction func logInButtonPressed() {
-        guard userNameTextField.text == user.login, passwordTextField.text == user.password else {
+        guard userNameTextField.text == user.login,
+              passwordTextField.text == user.password else {
             showAlert(
                 title: "Damn, that sucks! \u{1f600}",
                 message: "Wrong Login or Password. Try again, man!"
@@ -72,5 +88,15 @@ extension LogInViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func getColor(mainColor: UIColor, secondColor: UIColor) -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [primaryColor.cgColor, secondaryColor.cgColor]
+        gradientLayer.shouldRasterize = true // Для оптимизации и только
+        
+        return gradientLayer
     }
 }
