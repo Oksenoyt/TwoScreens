@@ -39,18 +39,10 @@ class LogInViewController: UIViewController {
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotLogInButtonPressed() {
-        showAlert(
-            title: "Oops!",
-            message: "Your user name is: \(userName)"
-        )
-    }
-    
-    @IBAction func forgotPassButtonPressed() {
-        showAlert(
-            title: "Oops!",
-            message: "Your password is: \(password)"
-        )
+    @IBAction func forgotRegistrationData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your user name is: \(userName)")
+        : showAlert(title: "Oops!", message: "Your password is: \(password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
