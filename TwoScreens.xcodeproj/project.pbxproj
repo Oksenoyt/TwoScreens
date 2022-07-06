@@ -55,6 +55,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		770C8EA128755FF100653F27 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				77CFA2B3286FF94D00AAC6CA /* AppDelegate.swift */,
+				77CFA2B5286FF94D00AAC6CA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		77CFA2A7286FF94D00AAC6CA = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				770C8E9E28755F7A00653F27 /* Models */,
-				77CFA2B3286FF94D00AAC6CA /* AppDelegate.swift */,
-				77CFA2B5286FF94D00AAC6CA /* SceneDelegate.swift */,
+				770C8EA128755FF100653F27 /* App */,
 				77CFA2B7286FF94D00AAC6CA /* LogInViewController.swift */,
 				77CFA2CB2875509C00AAC6CA /* TabBarViewController.swift */,
 				77CFA2C72870000900AAC6CA /* WelcomeViewController.swift */,
