@@ -169,6 +169,22 @@
             </objects>
             <point key="canvasLocation" x="1020" y="185"/>
         </scene>
+        <!--Photos-->
+        <scene sceneID="lKm-40-Tnk">
+            <objects>
+                <viewController id="zAD-Oe-0PG" customClass="PhotosViewController" customModule="TwoScreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhk-Gz-AHT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CZj-Df-cK7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photos" image="photo" catalog="system" id="Alt-v0-C5C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4J-Le-XGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="185"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="mDC-GS-vEG">
             <objects>
@@ -181,6 +197,7 @@
                     <connections>
                         <segue destination="SsO-0a-DcP" kind="relationship" relationship="viewControllers" id="P17-kv-jue"/>
                         <segue destination="evP-RC-XJU" kind="relationship" relationship="viewControllers" id="PSg-Uf-qXI"/>
+                        <segue destination="zAD-Oe-0PG" kind="relationship" relationship="viewControllers" id="YKf-IY-pVH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6l1-c2-KgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -190,6 +207,7 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

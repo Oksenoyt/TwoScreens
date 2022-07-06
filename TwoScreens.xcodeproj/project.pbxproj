@@ -16,6 +16,7 @@
 		77CFA2C82870000900AAC6CA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2C72870000900AAC6CA /* WelcomeViewController.swift */; };
 		77CFA2CA28754BB500AAC6CA /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2C928754BB500AAC6CA /* PersonalInfoViewController.swift */; };
 		77CFA2CC2875509C00AAC6CA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2CB2875509C00AAC6CA /* TabBarViewController.swift */; };
+		77CFA2CE2875540300AAC6CA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2CD2875540300AAC6CA /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		77CFA2C72870000900AAC6CA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		77CFA2C928754BB500AAC6CA /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		77CFA2CB2875509C00AAC6CA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		77CFA2CD2875540300AAC6CA /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				77CFA2CB2875509C00AAC6CA /* TabBarViewController.swift */,
 				77CFA2C72870000900AAC6CA /* WelcomeViewController.swift */,
 				77CFA2C928754BB500AAC6CA /* PersonalInfoViewController.swift */,
+				77CFA2CD2875540300AAC6CA /* PhotosViewController.swift */,
 				77CFA2B9286FF94D00AAC6CA /* Main.storyboard */,
 				77CFA2BC286FF94E00AAC6CA /* Assets.xcassets */,
 				77CFA2BE286FF94E00AAC6CA /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				77CFA2B8286FF94D00AAC6CA /* LogInViewController.swift in Sources */,
 				77CFA2B4286FF94D00AAC6CA /* AppDelegate.swift in Sources */,
 				77CFA2B6286FF94D00AAC6CA /* SceneDelegate.swift in Sources */,
+				77CFA2CE2875540300AAC6CA /* PhotosViewController.swift in Sources */,
 				77CFA2CC2875509C00AAC6CA /* TabBarViewController.swift in Sources */,
 				77CFA2C82870000900AAC6CA /* WelcomeViewController.swift in Sources */,
 			);
