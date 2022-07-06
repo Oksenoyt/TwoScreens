@@ -160,10 +160,26 @@
                     <view key="view" contentMode="scaleToFill" id="o6V-Wh-i0e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qeu-xc-fET">
+                                <rect key="frame" x="16" y="202" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CMh-X4-Liu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qeu-xc-fET" firstAttribute="top" secondItem="CMh-X4-Liu" secondAttribute="top" constant="158" id="VK7-KU-XDM"/>
+                            <constraint firstItem="Qeu-xc-fET" firstAttribute="leading" secondItem="CMh-X4-Liu" secondAttribute="leading" constant="16" id="VSI-kr-Ztj"/>
+                            <constraint firstItem="CMh-X4-Liu" firstAttribute="trailing" secondItem="Qeu-xc-fET" secondAttribute="trailing" constant="16" id="rmd-Ty-Ces"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User info" image="person" catalog="system" id="BmO-dG-dBl"/>
+                    <connections>
+                        <outlet property="personalInfoLabel" destination="Qeu-xc-fET" id="SaP-yg-zNo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh7-xt-niW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

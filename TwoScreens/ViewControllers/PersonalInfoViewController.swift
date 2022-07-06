@@ -9,4 +9,6 @@ import UIKit
 
 class PersonalInfoViewController: UIViewController {
 
+    @IBOutlet var personalInfoLabel: UILabel!
+    
 }

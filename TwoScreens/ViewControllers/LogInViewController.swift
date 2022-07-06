@@ -29,6 +29,9 @@ class LogInViewController: UIViewController {
                 firstVC.modalPresentationStyle = .fullScreen
             } else if let secondVC = viewController as? PersonalInfoViewController {
                 secondVC.view.backgroundColor = .yellow
+                secondVC.personalInfoLabel.text = user.person.description
+            } else if let thirdVC = viewController as? PhotosViewController {
+                thirdVC.view.backgroundColor = .systemGreen
             }
         }
     }

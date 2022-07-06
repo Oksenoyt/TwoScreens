@@ -17,7 +17,7 @@ struct User {
             person: Person(
                 firstName: "Arseniy",
                 familyName: "Oksenoyt",
-                description: "Bla bla bla"
+                description: "Меня зовут Арсений.\nМне 35 лет."
             )
         )
     }
