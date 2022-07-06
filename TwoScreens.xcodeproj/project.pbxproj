@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770C8EA028755F8C00653F27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770C8E9F28755F8C00653F27 /* User.swift */; };
 		77CFA2B4286FF94D00AAC6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2B3286FF94D00AAC6CA /* AppDelegate.swift */; };
 		77CFA2B6286FF94D00AAC6CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2B5286FF94D00AAC6CA /* SceneDelegate.swift */; };
 		77CFA2B8286FF94D00AAC6CA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFA2B7286FF94D00AAC6CA /* LogInViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770C8E9F28755F8C00653F27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77CFA2B0286FF94D00AAC6CA /* TwoScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CFA2B3286FF94D00AAC6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CFA2B5286FF94D00AAC6CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770C8E9E28755F7A00653F27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				770C8E9F28755F8C00653F27 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		77CFA2A7286FF94D00AAC6CA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		77CFA2B2286FF94D00AAC6CA /* TwoScreens */ = {
 			isa = PBXGroup;
 			children = (
+				770C8E9E28755F7A00653F27 /* Models */,
 				77CFA2B3286FF94D00AAC6CA /* AppDelegate.swift */,
 				77CFA2B5286FF94D00AAC6CA /* SceneDelegate.swift */,
 				77CFA2B7286FF94D00AAC6CA /* LogInViewController.swift */,
@@ -154,6 +165,7 @@
 				77CFA2B8286FF94D00AAC6CA /* LogInViewController.swift in Sources */,
 				77CFA2B4286FF94D00AAC6CA /* AppDelegate.swift in Sources */,
 				77CFA2B6286FF94D00AAC6CA /* SceneDelegate.swift in Sources */,
+				770C8EA028755F8C00653F27 /* User.swift in Sources */,
 				77CFA2CE2875540300AAC6CA /* PhotosViewController.swift in Sources */,
 				77CFA2CC2875509C00AAC6CA /* TabBarViewController.swift in Sources */,
 				77CFA2C82870000900AAC6CA /* WelcomeViewController.swift in Sources */,
