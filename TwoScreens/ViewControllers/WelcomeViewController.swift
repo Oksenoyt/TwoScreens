@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var colorView: UIView!
     
-    var user = ""
+    var login = ""
     
     private let primaryColor = UIColor(
         red: 252/255,
@@ -39,6 +39,6 @@ class WelcomeViewController: UIViewController {
         gradientLayer.shouldRasterize = true // Для оптимизации и только
         colorView.layer.addSublayer(gradientLayer)
         
-        welcomeLabel.text = "Welcome, \(user) \u{1F60A}"
+        welcomeLabel.text = "Welcome, \(login) \u{1F60A}"
     }
 }
