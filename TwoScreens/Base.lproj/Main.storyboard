@@ -41,7 +41,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGl-5g-Uah"/>
-                                    <segue destination="SsO-0a-DcP" kind="presentation" modalPresentationStyle="fullScreen" id="Oj2-3N-K89"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iUX-ld-iPj">
@@ -84,6 +83,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="NbY-7B-HtO" id="VY2-CL-Mhm"/>
                         <outlet property="userNameTextField" destination="vob-B2-sdm" id="gsh-8S-9J3"/>
+                        <segue destination="SsO-0a-DcP" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="hs8-zV-jiF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

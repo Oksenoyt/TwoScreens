@@ -30,9 +30,13 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInButtonPressed() {
         guard userNameTextField.text == userName, passwordTextField.text == password else {
-            showAlert(title: "Damn, that sucks! \u{1f600}", message: "Wrong Login or Password. Try again, man!")
+            showAlert(
+                title: "Damn, that sucks! \u{1f600}",
+                message: "Wrong Login or Password. Try again, man!"
+            )
             return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotLogInButtonPressed() {
