@@ -16,7 +16,7 @@ class LogInViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,7 +31,8 @@ class LogInViewController: UIViewController {
                 secondVC.view.backgroundColor = .yellow
                 secondVC.personalInfoLabel.text = user.person.description
             } else if let thirdVC = viewController as? PhotosViewController {
-                thirdVC.view.backgroundColor = .systemGreen
+                //let photo = UIImage(named: user.person.photo)
+                thirdVC.userPhoto = UIImage(named: user.person.photo)
             }
         }
     }

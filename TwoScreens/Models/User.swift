@@ -17,7 +17,8 @@ struct User {
             person: Person(
                 firstName: "Arseniy",
                 familyName: "Oksenoyt",
-                description: "Меня зовут Арсений.\nМне 35 лет."
+                description: "Меня зовут Арсений.\nМне 35 лет.",
+                photo: "Arseniy"
             )
         )
     }
@@ -27,4 +28,5 @@ struct Person {
     let firstName: String
     let familyName: String
     let description: String
+    let photo: String
 }

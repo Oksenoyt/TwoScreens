@@ -39,6 +39,6 @@ class WelcomeViewController: UIViewController {
         gradientLayer.shouldRasterize = true // Для оптимизации и только
         colorView.layer.addSublayer(gradientLayer)
         
-        welcomeLabel.text = "Welcome, \(login) \u{1F60A}"
+        welcomeLabel.text = "Welcome,\n\(login) \u{1F60A}"
     }
 }
