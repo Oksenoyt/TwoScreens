@@ -21,11 +21,22 @@ class LogInViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController
-        else { return }
+//        guard let welcomeVC = segue.destination as? WelcomeViewController
+//        else { return }
+//
+//        welcomeVC.user = (userNameTextField.text ?? "")
+//        welcomeVC.modalPresentationStyle = .fullScreen
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
         
-        welcomeVC.user = (userNameTextField.text ?? "")
-        welcomeVC.modalPresentationStyle = .fullScreen
+        viewControllers.forEach { viewController in
+            if let firstVC = viewController as? WelcomeViewController {
+                firstVC.user = (userNameTextField.text ?? "")
+                firstVC.modalPresentationStyle = .fullScreen
+            } else if let secondVC = viewController as? PersonalInfoViewController {
+                secondVC.view.backgroundColor = .yellow
+            }
+        }
     }
     
     @IBAction func logInButtonPressed() {
