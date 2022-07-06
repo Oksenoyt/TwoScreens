@@ -24,7 +24,7 @@ class LogInViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController
         else { return }
         
-        welcomeVC.welcomeValue = userNameTextField.text
+        welcomeVC.user = (userNameTextField.text ?? "")
         welcomeVC.modalPresentationStyle = .fullScreen
     }
     
