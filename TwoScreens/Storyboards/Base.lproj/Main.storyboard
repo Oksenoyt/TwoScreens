@@ -202,13 +202,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-fv-hd8">
-                                <rect key="frame" x="16" y="191" width="382" height="304"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arseniy" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-fv-hd8">
+                                <rect key="frame" x="16" y="-167" width="396" height="960"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CZj-Df-cK7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ZA-fv-hd8" firstAttribute="centerY" secondItem="bhk-Gz-AHT" secondAttribute="centerY" constant="-150" id="n0M-BT-nwi"/>
+                            <constraint firstItem="CZj-Df-cK7" firstAttribute="trailing" secondItem="4ZA-fv-hd8" secondAttribute="trailing" constant="16" id="pF0-TB-0Tc"/>
+                            <constraint firstItem="4ZA-fv-hd8" firstAttribute="leading" secondItem="CZj-Df-cK7" secondAttribute="leading" constant="16" id="wVN-69-rmI"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="photo" catalog="system" id="Alt-v0-C5C"/>
                     <connections>
@@ -217,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4J-Le-XGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766.6666666666667" y="184.82142857142856"/>
+            <point key="canvasLocation" x="1764.9532710280373" y="183.36933045356372"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="mDC-GS-vEG">
@@ -241,6 +245,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arseniy" width="1280" height="960"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
